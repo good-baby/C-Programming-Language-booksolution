@@ -1,0 +1,38 @@
+#include "stdio.h"
+
+int main(){
+    int c;
+    int ndigits,nwhite,nother;
+    ndigits=nwhite=nother=0;
+    while ((c=getchar())!=EOF){
+        if(c>='0'&&c<='9')
+            ndigits++;
+        else if(c==' '||c=='\n'||c=='\t')
+            nwhite++;
+        else
+            nother++;
+
+
+
+    }
+
+    printf("ndigits:");
+    while (ndigits>0){
+        printf("*");
+        ndigits--;
+
+    }
+
+    printf("\nnwite:");
+    while (nwhite>0){
+        printf("*");
+        nwhite--;
+
+    }
+    printf("\nnother:");
+    while (nother>0){
+        printf("$");
+        nother--;
+
+    }
+}
