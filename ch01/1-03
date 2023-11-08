@@ -1,0 +1,16 @@
+#include <stdio.h>
+#define FAHR_MAX 400
+/*when fahr=0.20.40..., print fahr Celsius comparative sheet*/ 
+
+int main(){
+    int fahr=0;
+    float celsius;
+
+    printf(" fahr to celsius sheet\n");
+    while(fahr<=FAHR_MAX){
+        celsius=5*(fahr-32)/9.0;//fahr to celsius formula
+        printf("%3d\t%6.1f\n",fahr,celsius);
+        fahr+=20;//step length
+    }
+
+}
