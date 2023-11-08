@@ -1,0 +1,21 @@
+#include "stdio.h"
+
+int main(){
+    int c;
+    here:    while((c=getchar())!=EOF){
+            switch (c) {
+                case '\\':
+                    printf("\\\\");
+                    goto here;
+                case '\b':
+                    printf("\\b");
+                    goto here;
+                case '\t':
+                    printf("\\t");
+                    goto here;
+            }
+            putchar(c);
+
+        }
+
+}
