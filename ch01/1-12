@@ -1,0 +1,25 @@
+#include "stdio.h"
+#include "string.h"
+int main(){
+    int c,i=0;
+    char str[20];
+    while ((c=getchar())!=EOF){
+        if(('a' <= c && c <= 'z')||('A' <= c && c <= 'Z')){
+            str[i]=c;
+            i++;
+            continue;
+
+        }
+        if(i!=0){
+            str[i]='\0';
+            printf("%s\n",str);
+            memset(str, 0, sizeof(str));
+            i=0;
+
+        }
+
+
+
+    }
+
+}
