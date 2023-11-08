@@ -1,0 +1,14 @@
+#include "stdio.h"
+
+int main(){
+    int c,pre_word;
+    pre_word=getchar();
+    putchar(pre_word);
+    while ((c=getchar())!=EOF){
+        if(c==' '&&pre_word==' ')
+            continue;
+        else
+            putchar(pre_word=c);
+
+    }
+}
